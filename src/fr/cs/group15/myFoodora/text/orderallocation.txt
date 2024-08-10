@@ -1,0 +1,124 @@
+startup
+
+login emilieleroy emiliepass
+
+createOrder "Chez Pierre"
+addItemToOrder "Salade César"
+addItemToOrder "Menu Classique"
+endOrder
+
+logout
+
+login lauradubois laurapass
+
+createOrder "La Trattoria"
+addItemToOrder "Menu Antipasto"
+addItemToOrder "Menu Italiano"
+addItemToOrder "Tiramisu"
+endOrder
+
+logout
+
+login fatimaalves fatimapass
+
+createOrder "El Ranchero"
+addItemToOrder "Nachos"
+addItemToOrder "Menu Mexicano"
+addItemToOrder "Menu Vegetariano"
+endOrder
+
+logout
+
+login alexjohnson alexpass
+
+createOrder "Sakura Garden"
+addItemToOrder "Edamame"
+addItemToOrder "Menu Sushi"
+addItemToOrder "Menu Ramen"
+endOrder
+
+logout
+
+login johnsmith johnpass
+
+createOrder "Chez Pierre"
+addItemToOrder "Tarte aux Fruits"
+addItemToOrder "Menu Végétarien"
+endOrder
+
+logout
+
+login mariagarcia mariapass
+
+createOrder "La Trattoria"
+addItemToOrder "Bruschetta"
+addItemToOrder "Menu Fresco"
+endOrder
+
+logout
+
+
+login alikhan alipass
+acceptorder 0
+logout
+
+
+login sofiarossi sofiapass
+logout
+
+login miguelsantos miguelpass
+logout
+
+login annapetrov annapass
+logout
+
+
+
+login sofiarossi sofiapass
+acceptorder 5
+logout
+
+login miguelsantos miguelpass
+logout
+
+login annapetrov annapass
+logout
+
+
+login alikhan alipass
+deliverorder
+logout
+
+login miguelsantos miguelpass
+acceptorder 4
+logout
+
+login alikhan alipass
+logout
+
+login sofiarossi sofiapass
+deliverorder
+logout
+
+login annapetrov annapass
+acceptorder 3
+logout
+
+login alikhan alipass
+acceptorder 1
+deliverorder
+logout
+
+login miguelsantos miguelpass
+deliverorder
+logout
+
+
+
+login ceo 123456789
+showcourierdeliveries
+logout
+
+login cp france54
+finddeliverer 0
+logout

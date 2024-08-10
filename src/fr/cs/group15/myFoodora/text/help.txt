@@ -1,0 +1,81 @@
+startup <> : initializes the system by creating a series of users and menus for the restaurants.
+
+login <username> <password> : Allows a user login.
+
+logout <> : Allows the currently logged on user to log off.
+
+registerRestaurant <name> <username> <address> <password> : For the currently logged on manager to add a restaurant with the given name, address (bi-dimensional integer coordinates separated by a comma, such as 15,16), username, and password to the system.
+
+registerCustomer <firstName> <lastName> <username> <address> <password> : For the currently logged on manager to add a customer with the given first name, last name, username, address (bi-dimensional integer coordinates separated by a comma, such as 15,16), and password to the system.
+
+registerCourier <firstName> <lastName> <username> <position> <password> : For the currently logged on manager to add a courier with the given first name, last name, username, position (bi-dimensional integer coordinates separated by a comma, such as 15,16), and password to the system.
+
+registerManager <firstName> <lastName> <username> <password> : For the currently logged on manager to add another manager with the given first name, last name, username, and password to the system.
+
+register <firstName> <lastname> <username> <adress> <password> : For a customer to register himself (without being logged on) with the given first name, last name, username, address (bi-dimensional integer coordinates separated by a comma, such as 15,16), and password to the system.
+
+setPhone <phoneNumber> : sets the phone number of the currently logged on customer or courier.
+
+setMail <emailAddress> : sets the email address of the currently logged on customer.
+
+setNotifications <wantNotif> : sets the preferences of the currently logged on customer to receive notifications about special offers (specify true if you do, false if you don't).
+
+addDishRestaurantMenu <dishName> <dishCategory> (<diet> <glutenfree> : both optional) <unitPrice> : For the currently logged on restaurant to add a dish with the given name, category (starter, maindish (no space), dessert), food diet (standard or vegetarian), whether it is gluten free (precise true if it is, false if it is not) and price to the menu of the restaurant.
+You must precise both the diet and the glutenfree arguments, or none. If you don't, the dish will be standard and not gluten free by default.
+
+removeDishRestaurantMenu <dishName> : For the currently logged on restaurant to remove a dish with the given name from its menu if it exists.
+
+createMeal <mealName> <mealType> : For the currently logged on restaurant to create a meal with the given name and a given type (fullmeal or halfmeal, without space), and adds it to its menu.
+
+addDishToMeal <dishName> <mealName> : For the currently logged on restaurant to add a dish to a meal with the given name.
+
+removeDishFromMeal <dishName> <mealName> : For the currently logged on restaurant to remove a dish from a meal with the given name.
+
+showMeal <mealName> : For the currently logged on restaurant to show the dishes in a meal with the given name.
+
+deleteMeal <mealName> : For the currently logged on restaurant to remove a meal with the given name from its menu.
+
+setSpecialOffer <mealName> : For the currently logged on restaurant to add a meal to the meal-of-the-week special offer.
+
+removeFromSpecialOffer <mealName> : For the currently logged on restaurant to remove a meal from the special offer.
+
+createOrder <restaurantName> : For the currently logged on customer to create an order from the given restaurant.
+
+addItemToOrder <itemName> : For the currently logged on customer to add an item (either a menu item or a meal-deal) to the current order.
+
+endOrder <> : For the currently logged on customer to finalize the current order and pay for it. Allows the system to treat it and allocate it to a courier.
+
+changeState <dutyState> : For the currently logged on courier to change their state (specify "onDuty" or "offDuty").
+
+acceptOrder <orderID> : For the currently logged on courier to accept an order to deliver with its ID.
+
+deliverOrder <> : For the currently logged on courier to tell the system the previously accepted order was delivered. It won't work if you have not accepted any order !
+
+findDeliverer <orderID> : For the currently logged on restaurant to allocate an order to a deliverer by applying the current delivery policy.
+This command is not necessary since the allocation is automatically performed. It is only written for the benefits of tests.
+
+setDeliveryPolicy <delPolicyName> : For the currently logged on MyFoodora manager to set the delivery policy of the system to the one passed as an argument ("fastest" or "fairoccupation").
+
+setServiceFee <serviceFee> : For the currently logged on manager to set the value of the service fee
+
+setMarkupPercentage <markupPercentage> : For the currently logged on manager to set the value of the markup percentage
+
+setDeliveryCost <deliveryCost> : For the currently logged on manager to set the value of the delivery cost
+
+associateCard <userName> <cardType> : For the currently logged on MyFoodora manager to associate a fidelity card ("basic", "points" or "lottery") to a user with the given name.
+
+showCourierDeliveries <> : For the currently logged on MyFoodora manager to display the list of couriers sorted in decreasing order w.r.t. the number of completed deliveries.
+
+showRestaurantTop <> : For the currently logged on MyFoodora manager to display the list of restaurants sorted in decreasing order w.r.t. the number of delivered orders.
+
+showCustomers <> : For the currently logged on MyFoodora manager to display the list of customers.
+
+showMenuItem <restaurant-name> : For the currently logged on MyFoodora manager, restaurant or customer to display the menu of a given restaurant.
+
+showTotalProfit (<startDate> <endDate> both optional) : For the currently logged on MyFoodora manager to show the total profit of the system within a time interval if a start date and an end date are specified. If none are specified, show the total profit of the system since creation.
+
+runTest <testScenario-file> : For a generic user of the CLUI (no need to login) to execute the list of CLUI commands contained in the testScenario file passed as an argument.
+
+help <> : For a generic user of the CLUI (no need to login) to display the list of available CLUI commands with an indication of their syntax and their action.
+
+help <command> : Display the description of the specified command.

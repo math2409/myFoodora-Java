@@ -1,0 +1,14 @@
+startup
+
+login tasteofindia indiataste
+
+setSpecialOffer "Menu Spicy"
+
+logout
+
+login alexjohnson alexpass
+logout
+
+login tasteofindia indiataste
+removeFromSpecialOffer "Menu Spicy"
+logout

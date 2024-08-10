@@ -1,0 +1,21 @@
+
+register harry potter sorcerer 15,16 thepotter12
+
+setPhone 0102030405
+setMail harrypotter@gmail.com
+
+setNotifications true
+
+logout
+
+
+login ceo 123456789
+registerCourier Ryan Gosling ken 20,30 thebarbie89
+logout
+
+login ken thebarbie89
+
+setPhone 0655667788
+changestate onDuty
+
+logout

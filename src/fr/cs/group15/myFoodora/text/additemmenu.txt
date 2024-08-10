@@ -1,0 +1,19 @@
+startup
+
+login elran mexico12
+
+addDishRestaurantMenu "Chili con carne" maindish 15.0
+addDishRestaurantMenu salsa starter vegetarian true 5.0
+
+removeDishRestaurantMenu salsa
+
+createMeal "Menu Chili" halfmeal
+addDishToMeal "Chili con carne" "Menu Chili"
+addDishToMeal Churros "Menu Chili"
+
+showMeal "Menu Chili"
+
+removeDishFromMeal Churros "Menu Chili"
+deleteMeal "Menu Chili"
+
+logout

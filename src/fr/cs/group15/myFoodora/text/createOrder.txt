@@ -1,0 +1,13 @@
+startup
+
+login alexjohnson alexpass
+
+showMenuItem "Sakura Garden"
+
+createOrder "Sakura Garden"
+addItemToOrder "Edamame"
+addItemToOrder "Menu Sushi"
+addItemToOrder "Menu Ramen"
+endOrder
+
+logout
